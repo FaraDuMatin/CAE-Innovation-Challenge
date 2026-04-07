@@ -23,7 +23,26 @@ Input comes from voice, then a two-stage Gemini flow resolves intent and payload
 ## Features
 - VR cockpit interaction on Meta Quest 3
 - Voice input (push-to-talk) with text fallback
-- LLM-assisted procedure guidance with Gemini
+- LLM-assisted procedure guidance
 - Dynamic cockpit control highlighting
 - Procedure pause/resume behavior for interruptive questions
 - Mock mode and cloud mode for development and validation
+- Debug mode on computer for computers.
+
+## Simulator Showcase
+
+### Cockpit View
+![Cockpit view](docs/images/cockpit.png)
+
+### Interactive Controls
+![Interactive controls](docs/images/controls.png)
+
+### Exterior View
+![Exterior view](docs/images/exterieur.png)
+
+### Highlight / Illumination
+![Control illumination](docs/images/illumination.png)
+
+### Additional Test View
+![Test scene view](docs/images/test.png)
+
