@@ -1,0 +1,647 @@
+{
+	"schemaVersion": 1,
+	"assistantName": "Atlas",
+	"procedures": [
+		{
+			"procedureId": "coldDarkToEngineStart",
+			"displayName": "Cold and Dark to Engine Start",
+			"isMandatory": true,
+			"steps": [
+				{
+					"stepType": "control",
+					"controlId": "ParkingBrake",
+					"action": "ON",
+					"instructionText": "Set parking brake to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "BatteryMaster",
+					"action": "ON",
+					"instructionText": "Set battery master to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "StandbyPower",
+					"action": "ON",
+					"instructionText": "Set standby power to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "GroundPower",
+					"action": "ON",
+					"instructionText": "Set ground power to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ApuSelector",
+					"action": "START_THEN_ON",
+					"instructionText": "Move APU switch to START, then release to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "monitor",
+					"monitorKey": "apuBlueLight",
+					"instructionText": "Wait for blue APU light",
+					"waitForClick": false
+				},
+				{
+					"stepType": "control",
+					"controlId": "ApuGen1",
+					"action": "ON",
+					"instructionText": "Set APU generator 1 to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ApuGen2",
+					"action": "ON",
+					"instructionText": "Set APU generator 2 to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "GroundPower",
+					"action": "OFF",
+					"instructionText": "Set ground power to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "FuelPumpsGroup1",
+					"action": "ON",
+					"instructionText": "Set aft and forward fuel pumps group 1 to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "FuelPumpsGroup2",
+					"action": "ON",
+					"instructionText": "Set aft and forward fuel pumps group 2 to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ApuBleed",
+					"action": "ON",
+					"instructionText": "Set APU bleed to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "HydraulicPumps1",
+					"action": "ON",
+					"instructionText": "Set hydraulic pump 1 (A) to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "HydraulicPumps2",
+					"action": "ON",
+					"instructionText": "Set hydraulic pump 2 (B) to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ElectricalPumps1",
+					"action": "ON",
+					"instructionText": "Set electrical pump 1 (A) to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ElectricalPumps2",
+					"action": "ON",
+					"instructionText": "Set electrical pump 2 (B) to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "Engine1Starter",
+					"action": "GRD",
+					"instructionText": "Set engine 1 to GRD",
+					"waitForClick": true
+				},
+				{
+					"stepType": "monitor",
+					"monitorKey": "engine1OilWarningsOff",
+					"instructionText": "Wait until engine 1 OIL FILTER BYPASS and LOW OIL PRESSURE are off",
+					"waitForClick": false
+				},
+				{
+					"stepType": "control",
+					"controlId": "FuelControlLever1",
+					"action": "ON",
+					"instructionText": "Set engine 1 fuel control lever UP (ON)",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "Engine2Starter",
+					"action": "GRD",
+					"instructionText": "Set engine 2 to GRD",
+					"waitForClick": true
+				},
+				{
+					"stepType": "monitor",
+					"monitorKey": "engine2OilWarningsOff",
+					"instructionText": "Wait until engine 2 OIL FILTER BYPASS and LOW OIL PRESSURE are off",
+					"waitForClick": false
+				},
+				{
+					"stepType": "control",
+					"controlId": "FuelControlLever2",
+					"action": "ON",
+					"instructionText": "Set engine 2 fuel control lever UP (ON)",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "EngineGen1",
+					"action": "ON",
+					"instructionText": "Set engine generator 1 to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "EngineGen2",
+					"action": "ON",
+					"instructionText": "Set engine generator 2 to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ApuGen1",
+					"action": "OFF",
+					"instructionText": "Set APU generator 1 to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ApuGen2",
+					"action": "OFF",
+					"instructionText": "Set APU generator 2 to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ApuBleed",
+					"action": "OFF",
+					"instructionText": "Set APU bleed to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ApuSelector",
+					"action": "OFF",
+					"instructionText": "Set APU to OFF",
+					"waitForClick": true
+				}
+			]
+		},
+		{
+			"procedureId": "beforeTaxi",
+			"displayName": "Before Taxi",
+			"isMandatory": true,
+			"steps": [
+				{
+					"stepType": "control",
+					"controlId": "SeatbeltSign",
+					"action": "ON",
+					"instructionText": "Set seatbelt sign to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ElevatorTrim",
+					"action": "SET_TAKEOFF",
+					"instructionText": "Set elevator trim for takeoff (+10 degrees)",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "FlapsLever",
+					"action": "SET_5",
+					"instructionText": "Set flaps to 5 degrees",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "Yoke",
+					"action": "CHECK",
+					"instructionText": "Check flight controls (pitch, roll, yaw)",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "TaxiLights",
+					"action": "ON",
+					"instructionText": "Set taxi lights to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "TransponderDial",
+					"action": "ALT_OFF",
+					"instructionText": "Set transponder to ALT OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ParkingBrake",
+					"action": "OFF",
+					"instructionText": "Set parking brake to OFF",
+					"waitForClick": true
+				}
+			]
+		},
+		{
+			"procedureId": "beforeTakeoff",
+			"displayName": "Before Takeoff",
+			"isMandatory": false,
+			"steps": [
+				{
+					"stepType": "control",
+					"controlId": "AltimeterDial",
+					"action": "SET",
+					"instructionText": "Set altimeter",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "TransponderDial",
+					"action": "ALT_ON",
+					"instructionText": "Set transponder to ALT ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Fixed_L",
+					"action": "ON",
+					"instructionText": "Set left fixed landing light to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Fixed_R",
+					"action": "ON",
+					"instructionText": "Set right fixed landing light to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Retractable_L",
+					"action": "ON",
+					"instructionText": "Set left retractable landing light to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Retractable_R",
+					"action": "ON",
+					"instructionText": "Set right retractable landing light to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "TaxiLights",
+					"action": "OFF",
+					"instructionText": "Set taxi lights to OFF",
+					"waitForClick": true
+				}
+			]
+		},
+		{
+			"procedureId": "afterTakeoff",
+			"displayName": "After Takeoff",
+			"isMandatory": false,
+			"steps": [
+				{
+					"stepType": "control",
+					"controlId": "LandingGearLever",
+					"action": "UP",
+					"instructionText": "Set landing gear to UP",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "FlapsLever",
+					"action": "RETRACT",
+					"instructionText": "Retract flaps",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ThrustLevers1",
+					"action": "SET_REQUIRED",
+					"instructionText": "Set thrust lever 1 as required",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ThrustLevers2",
+					"action": "SET_REQUIRED",
+					"instructionText": "Set thrust lever 2 as required",
+					"waitForClick": true
+				}
+			]
+		},
+		{
+			"procedureId": "cruise",
+			"displayName": "Cruise",
+			"isMandatory": false,
+			"steps": [
+				{
+					"stepType": "control",
+					"controlId": "SeatbeltSign",
+					"action": "OFF",
+					"instructionText": "Set seatbelt sign to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Fixed_L",
+					"action": "OFF",
+					"instructionText": "Set left fixed landing light to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Fixed_R",
+					"action": "OFF",
+					"instructionText": "Set right fixed landing light to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Retractable_L",
+					"action": "OFF",
+					"instructionText": "Set left retractable landing light to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Retractable_R",
+					"action": "OFF",
+					"instructionText": "Set right retractable landing light to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "AltimeterDial",
+					"action": "SET",
+					"instructionText": "Set altimeter",
+					"waitForClick": true
+				}
+			]
+		},
+		{
+			"procedureId": "beforeLanding",
+			"displayName": "Before Landing",
+			"isMandatory": false,
+			"steps": [
+				{
+					"stepType": "control",
+					"controlId": "SeatbeltSign",
+					"action": "ON",
+					"instructionText": "Set seatbelt sign to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "AltimeterDial",
+					"action": "SET",
+					"instructionText": "Set altimeter",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Fixed_L",
+					"action": "ON",
+					"instructionText": "Set left fixed landing light to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Fixed_R",
+					"action": "ON",
+					"instructionText": "Set right fixed landing light to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Retractable_L",
+					"action": "ON",
+					"instructionText": "Set left retractable landing light to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Retractable_R",
+					"action": "ON",
+					"instructionText": "Set right retractable landing light to ON",
+					"waitForClick": true
+				}
+			]
+		},
+		{
+			"procedureId": "landing",
+			"displayName": "Landing",
+			"isMandatory": false,
+			"steps": [
+				{
+					"stepType": "control",
+					"controlId": "SpeedBrakeLever",
+					"action": "SET_REQUIRED",
+					"instructionText": "Set speed brakes as required",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "FlapsLever",
+					"action": "SET_REQUIRED",
+					"instructionText": "Set flaps as required",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingGearLever",
+					"action": "DOWN",
+					"instructionText": "Set landing gear to DOWN",
+					"waitForClick": true
+				}
+			]
+		},
+		{
+			"procedureId": "afterLanding",
+			"displayName": "After Landing",
+			"isMandatory": false,
+			"steps": [
+				{
+					"stepType": "control",
+					"controlId": "FlapsLever",
+					"action": "RETRACT",
+					"instructionText": "Retract flaps",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "SpeedBrakeLever",
+					"action": "RETRACT",
+					"instructionText": "Retract speed brakes",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Fixed_L",
+					"action": "OFF",
+					"instructionText": "Set left fixed landing light to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Fixed_R",
+					"action": "OFF",
+					"instructionText": "Set right fixed landing light to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Retractable_L",
+					"action": "OFF",
+					"instructionText": "Set left retractable landing light to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "LandingLights_Retractable_R",
+					"action": "OFF",
+					"instructionText": "Set right retractable landing light to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "TransponderDial",
+					"action": "ALT_OFF",
+					"instructionText": "Set transponder to ALT OFF",
+					"waitForClick": true
+				}
+			]
+		},
+		{
+			"procedureId": "parking",
+			"displayName": "Parking",
+			"isMandatory": false,
+			"steps": [
+				{
+					"stepType": "control",
+					"controlId": "ParkingBrake",
+					"action": "ON",
+					"instructionText": "Set parking brake to ON",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "SeatbeltSign",
+					"action": "OFF",
+					"instructionText": "Set seatbelt sign to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "TransponderDial",
+					"action": "STBY",
+					"instructionText": "Set transponder to STBY",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "EngineGen1",
+					"action": "OFF",
+					"instructionText": "Set engine generator 1 to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "EngineGen2",
+					"action": "OFF",
+					"instructionText": "Set engine generator 2 to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "FuelControlLever1",
+					"action": "OFF",
+					"instructionText": "Set fuel control lever 1 to DOWN (OFF)",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "FuelControlLever2",
+					"action": "OFF",
+					"instructionText": "Set fuel control lever 2 to DOWN (OFF)",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "HydraulicPumps1",
+					"action": "OFF",
+					"instructionText": "Set hydraulic pump 1 (A) to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "HydraulicPumps2",
+					"action": "OFF",
+					"instructionText": "Set hydraulic pump 2 (B) to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ElectricalPumps1",
+					"action": "OFF",
+					"instructionText": "Set electrical pump 1 (A) to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "ElectricalPumps2",
+					"action": "OFF",
+					"instructionText": "Set electrical pump 2 (B) to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "FuelPumpsGroup1",
+					"action": "OFF",
+					"instructionText": "Set fuel pumps group 1 to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "FuelPumpsGroup2",
+					"action": "OFF",
+					"instructionText": "Set fuel pumps group 2 to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "StandbyPower",
+					"action": "OFF",
+					"instructionText": "Set standby power to OFF",
+					"waitForClick": true
+				},
+				{
+					"stepType": "control",
+					"controlId": "BatteryMaster",
+					"action": "OFF",
+					"instructionText": "Set battery master to OFF",
+					"waitForClick": true
+				}
+			]
+		}
+	]
+}

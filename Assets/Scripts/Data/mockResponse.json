@@ -1,0 +1,98 @@
+{
+	"schemaVersion": 1,
+	"assistantName": "Atlas",
+	"llmOutputContract": {
+		"notes": [
+			"LLM must not return full procedure steps.",
+			"For responseType='procedure', LLM returns only procedureId plus textResponse.",
+			"Procedure execution steps are fetched locally from procedure.json."
+		],
+		"responseTypes": [
+			"procedure",
+			"simpleAnswer",
+			"error"
+		],
+		"fieldsByType": {
+			"procedure": [
+				"responseType",
+				"procedureId",
+				"textResponse",
+				"resumeFromStepIndex"
+			],
+			"simpleAnswer": [
+				"responseType",
+				"textResponse",
+				"highlightControlIds"
+			],
+			"error": [
+				"responseType",
+				"textResponse"
+			]
+		}
+	},
+	"availableProcedureIds": [
+		"coldDarkToEngineStart",
+		"beforeTaxi",
+		"beforeTakeoff",
+		"afterTakeoff",
+		"cruise",
+		"beforeLanding",
+		"landing",
+		"afterLanding",
+		"parking"
+	],
+	"mockLlmResponses": [
+		{
+			"responseType": "procedure",
+			"procedureId": "coldDarkToEngineStart",
+			"textResponse": "Starting Cold and Dark to Engine Start.",
+			"resumeFromStepIndex": 0
+		},
+		{
+			"responseType": "procedure",
+			"procedureId": "beforeTaxi",
+			"textResponse": "Starting before Taxi procedure",
+			"resumeFromStepIndex": 0
+		},
+		{
+			"responseType": "procedure",
+			"procedureId": "beforeTakeoff",
+			"textResponse": "Starting before takeoff procedure",
+			"resumeFromStepIndex": 0
+		},
+		{
+			"responseType": "procedure",
+			"procedureId": "beforeTaxi",
+			"textResponse": "Continuing with Before Taxi checks.",
+			"resumeFromStepIndex": 0
+		},
+		{
+			"responseType": "simpleAnswer",
+			"textResponse": "The yoke controls pitch and roll.",
+			"highlightControlIds": [
+				"Yoke"
+			]
+		},
+		{
+			"responseType": "error",
+			"textResponse": "I could not map that request to an available procedure."
+		}
+	],
+	"llmInputContextExample": {
+		"assistantName": "Atlas",
+		"voiceInputText": "Atlas continue engine start",
+		"activeProcedureId": "coldDarkToEngineStart",
+		"activeStepIndex": 6,
+		"availableProcedureIds": [
+			"coldDarkToEngineStart",
+			"beforeTaxi",
+			"beforeTakeoff",
+			"afterTakeoff",
+			"cruise",
+			"beforeLanding",
+			"landing",
+			"afterLanding",
+			"parking"
+		]
+	}
+}
